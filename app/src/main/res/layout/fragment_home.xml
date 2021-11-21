@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_default_margin_max"
+        android:layout_marginEnd="@dimen/dimen_default_margin_max"
+        android:background="@drawable/border_qr"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimen_default_margin_max"
+        android:layout_marginEnd="@dimen/dimen_default_margin_max"
+        android:layout_marginBottom="@dimen/dimen_default_margin_max"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_button_height"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="@string/string_share"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_share"
+                app:iconGravity="textEnd" />
+
+            <Button
+                android:id="@+id/buttonCopy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_button_height"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:text="@string/string_copy"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_copy"
+                app:iconGravity="textEnd" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonRemove"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_button_height"
+            android:text="@string/string_remove_qr_code"
+            android:textAllCaps="true"
+            android:textColor="#EF1A1A" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

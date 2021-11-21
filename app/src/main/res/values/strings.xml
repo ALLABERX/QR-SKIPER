@@ -1,5 +1,65 @@
 <resources>
-    <string name="app_name">QR-SKIPER</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">QR - Пропуск</string>
+    <string name="string_tab_text_1">QR - Код</string>
+    <string name="string_tab_text_2">Данные</string>
+
+    <!-- Common-->
+    <string name="string_cancel">Отмена</string>
+
+    <!-- SliderActivity -->
+    <string name="string_next">Далее</string>
+    <string name="string_skip">Пропустить</string>
+    <string name="string_ok">Ок</string>
+    <string name="string_fast_access">Быстрый доступ к Вашему QR - коду</string>
+    <string name="string_scan_qr_code">Отсканируйте Ваш QR - код и пользуйтесь им в любой момент</string>
+    <string name="string_confidentiality">Ваши данные никому не передаются. Все храниться на Вашем устройстве</string>
+
+    <!-- SwitchLanguageDialog -->
+    <string name="string_dialog_choose_language">Выберите язык</string>
+    <string name="string_dialog_apply">Применить</string>
+
+    <!--    DeleteDialogFragment-->
+    <string name="string_confirmation">Подтверждение</string>
+    <string name="string_delete_qr_code">Вы действительно хотите удалить Ваш QR-код</string>
+    <string name="string_delete">Удалить</string>
+
+    <!-- HomeFragment -->
+    <string name="string_remove_qr_code">Удалить QR-код</string>
+    <string name="string_share">Поделиться</string>
+    <string name="string_share_qr_code">Поделиться QR-кодом</string>
+    <string name="string_copy">Копировать</string>
+    <string name="string_copied">Скопировано</string>
+    <string name="string_qr_code">QR-код</string>
+
+    <!--    StartActivity-->
+    <string name="string_scan_your_qr_code">Отсканируйте Ваш QR-код чтобы добавить его в приложение</string>
+    <string name="string_scan">Сканировать QR-Код</string>
+    <string name="string_enter_data_manually">Ввести данные вручную</string>
+
+    <!--    ScannerActivity-->
+    <string name="string_qr_code_scanner">Сканер QR-кода</string>
+
+    <!--    ManuallyActivity-->
+    <string name="string_manual_input">Ручной ввод</string>
+    <string name="string_enter_qr_code">Введите QR-код</string>
+
+    <!--    SettingsActivity-->
+    <string name="string_settings">Настройки</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
 </resources>
