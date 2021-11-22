@@ -1,11 +1,16 @@
 package com.allaber.skiper.activities.slider.adapter;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.allaber.skiper.utils.PreferenceManager;
+
+import java.util.Locale;
 
 public class MyViewPagerAdapter extends PagerAdapter {
 

@@ -29,9 +29,19 @@ public class SplashActivity extends AppCompatActivity {
             intent = new Intent(this, SliderActivity.class);
             preferenceManager.setFirstTimeLaunch(false);
         }
-
+        setAppLanguage();
         intent = new Intent(this, SliderActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void setAppLanguage() {
+        PreferenceManager preferenceManager = new PreferenceManager(this);
+        String language = preferenceManager.getAppLanguage();
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = getResources().getConfiguration();
+        configuration.locale = locale;
+        getBaseContext().getResources().updateConfiguration(configuration, null);
     }
 }

@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ import com.allaber.skiper.dialogs.DeleteDialogFragment;
 import com.allaber.skiper.utils.PreferenceManager;
 import com.allaber.skiper.utils.common.BaseFragmentActions;
 
+import java.util.Locale;
+
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
 
@@ -41,8 +44,8 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         initiationViewElements(view);
-        setOnClickListener();
         setImageViewQR();
+        setOnClickListener();
         return view;
     }
 
@@ -65,6 +68,7 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
 
     @Override
     public void onClick(View view) {
+        setAppLanguage();
         switch (view.getId()) {
             case R.id.buttonRemove:
                 removeQrCode();
@@ -96,10 +100,11 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
     }
 
     private void copyQrCode() {
+        setAppLanguage();
         ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText(getString(R.string.string_qr_code), qrCode);
         clipboard.setPrimaryClip(clip);
-        Toast.makeText(getActivity(), getString(R.string.string_copied), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), R.string.string_copied, Toast.LENGTH_SHORT).show();
     }
 
     private void setImageViewQR() {
@@ -115,5 +120,13 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
         return new HomeFragment();
     }
 
-
+    public void setAppLanguage() {
+        PreferenceManager preferenceManager = new PreferenceManager(getContext());
+        String language = preferenceManager.getAppLanguage();
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = getResources().getConfiguration();
+        configuration.locale = locale;
+        getResources().updateConfiguration(configuration, null);
+    }
 }

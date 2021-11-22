@@ -50,22 +50,20 @@
                 android:id="@+id/buttonShare"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_button_height"
-                android:layout_marginRight="4dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:text="@string/string_share"
                 android:textAllCaps="true"
-                app:icon="@drawable/ic_share"
                 app:iconGravity="textEnd" />
 
             <Button
                 android:id="@+id/buttonCopy"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_button_height"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="8dp"
                 android:layout_weight="1"
                 android:text="@string/string_copy"
                 android:textAllCaps="true"
-                app:icon="@drawable/ic_copy"
                 app:iconGravity="textEnd" />
 
         </LinearLayout>
@@ -75,6 +73,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_button_height"
+            android:layout_marginTop="8dp"
             android:text="@string/string_remove_qr_code"
             android:textAllCaps="true"
             android:textColor="#EF1A1A" />
