@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/color_splash_screen">
 
-    <Button
-        android:id="@+id/buttonSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dimen_appbar_height"
-        android:layout_marginTop="@dimen/dimen_default_margin_max"
-        android:layout_marginEnd="@dimen/dimen_default_margin_max"
-        android:background="@null"
-        android:text="@string/string_skip"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPagerStart"
         android:layout_width="0dp"
@@ -32,13 +18,31 @@
 
     </androidx.viewpager.widget.ViewPager>
 
+    <TextView
+        android:id="@+id/textViewSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/string_skip"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/imageButtonLanguage"
-        android:layout_width="@dimen/dimen_button_height"
-        android:layout_height="@dimen/dimen_button_height"
+        android:layout_width="@dimen/dimen_appbar_height"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_exit"
+        android:background="@drawable/button_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ru" />

@@ -31,6 +31,9 @@
     <string name="string_delete_qr_code">Are you sure you want to delete your QR code</string>
     <string name="string_delete">Delete</string>
 
+    <!--    ManuallyDialogFragment-->
+    <string name="string_enter_manually">Enter manually</string>
+
     <!--    StartActivity-->
     <string name="string_scan_your_qr_code">Scan your QR code to add it to the app</string>
     <string name="string_scan">Scan QR-Code</string>

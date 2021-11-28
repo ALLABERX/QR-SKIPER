@@ -22,7 +22,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.allaber.skiper.R;
-import com.allaber.skiper.dialogs.DeleteDialogFragment;
+import com.allaber.skiper.dialogs.OldDeleteDialogFragment;
 import com.allaber.skiper.utils.PreferenceManager;
 import com.allaber.skiper.utils.common.BaseFragmentActions;
 
@@ -84,10 +84,10 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
     }
 
     private void removeQrCode() {
-        DeleteDialogFragment deleteDialogFragment = new DeleteDialogFragment();
+        OldDeleteDialogFragment oldDeleteDialogFragment = new OldDeleteDialogFragment();
         FragmentManager manager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        deleteDialogFragment.show(transaction, "dialog");
+        oldDeleteDialogFragment.show(transaction, "dialog");
     }
 
     private void shareQrCode() {

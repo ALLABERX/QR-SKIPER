@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/drawable/button_exit.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/button_item_question.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/dialog_background.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/fadeout.xml" value="0.2412109375" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_copy.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_en.xml" value="0.371875" />
@@ -26,6 +27,8 @@
         <entry key="app/src/main/res/drawable/ic_point.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_point_false.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_point_true.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_ru.xml" value="0.22870370370370371" />
+        <entry key="app/src/main/res/drawable/ic_selected.xml" value="0.22870370370370371" />
         <entry key="app/src/main/res/drawable/ic_share.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/info.xml" value="0.3859375" />
         <entry key="app/src/main/res/drawable/settings.xml" value="0.371875" />
@@ -34,16 +37,18 @@
         <entry key="app/src/main/res/layout/activity_manually.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_scanner.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.35572916666666665" />
-        <entry key="app/src/main/res/layout/activity_slider.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_slider.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.25" />
         <entry key="app/src/main/res/layout/button_item_question.xml" value="0.35572916666666665" />
-        <entry key="app/src/main/res/layout/dialog_switch_language.xml" value="0.17486338797814208" />
+        <entry key="app/src/main/res/layout/dialog_manually.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/dialog_switch_language.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_browser.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3641025641025641" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2935185185185185" />
         <entry key="app/src/main/res/layout/intro_screen1.xml" value="0.33" />
         <entry key="app/src/main/res/layout/intro_screen2.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/intro_screen3.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/intro_screen3.xml" value="0.18" />
         <entry key="app/src/main/res/layout/settings_activity.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/xml/root_preferences.xml" value="0.35572916666666665" />
       </map>

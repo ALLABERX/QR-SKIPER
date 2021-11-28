@@ -15,7 +15,7 @@ import com.allaber.skiper.R;
 import com.allaber.skiper.activities.start.StartActivity;
 import com.allaber.skiper.utils.PreferenceManager;
 
-public class DeleteDialogFragment extends DialogFragment {
+public class OldDeleteDialogFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

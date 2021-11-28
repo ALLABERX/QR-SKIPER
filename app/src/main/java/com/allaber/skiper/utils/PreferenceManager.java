@@ -3,6 +3,7 @@ package com.allaber.skiper.utils;
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE;
 import static com.allaber.skiper.utils.Thesaurus.FIRST_LAUNCH;
 import static com.allaber.skiper.utils.Thesaurus.APP_PREFERENCES;
+import static com.allaber.skiper.utils.Thesaurus.NUMBER_OF_LAUNCHES;
 import static com.allaber.skiper.utils.Thesaurus.QR_CODE;
 
 import android.content.Context;
@@ -50,5 +51,16 @@ public class PreferenceManager {
 
     public String getAppLanguage(){
         return sharedPreferences.getString(APP_LANGUAGE, "");
+    }
+
+    public int getNumberOfLaunches() {
+        return sharedPreferences.getInt(NUMBER_OF_LAUNCHES, 0);
+    }
+
+    public void setNumberOfLaunches() {
+        int numberOfLaunches = sharedPreferences.getInt(NUMBER_OF_LAUNCHES, 0);
+        numberOfLaunches = numberOfLaunches + 1;
+        spEditor.putInt(NUMBER_OF_LAUNCHES, numberOfLaunches);
+        spEditor.apply();
     }
 }

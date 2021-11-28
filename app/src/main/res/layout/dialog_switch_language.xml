@@ -28,7 +28,8 @@
             android:layout_marginRight="16dp"
             android:text="@string/string_dialog_choose_language"
             android:textColor="@color/color_black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,44 +37,17 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/linearLayoutRu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimen_default_margin_max"
-                android:background="@drawable/button_item_question"
-                android:clickable="true"
-                android:orientation="horizontal"
-                android:padding="@dimen/dimen_default_padding_min">
-
-                <ImageView
-                    android:id="@+id/imageViewIcRu"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:clickable="false"
-                    app:srcCompat="@drawable/ic_ru" />
-
-                <TextView
-                    android:id="@+id/textViewRu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/dimen_default_margin_max"
-                    android:layout_weight="1"
-                    android:clickable="false"
-                    android:text="Русский"
-                    android:textColor="#5D5F61"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/linearLayoutEn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimen_default_margin_max"
+                android:layout_margin="@dimen/dimen_default_margin_min"
                 android:background="@drawable/button_item_question"
                 android:clickable="true"
                 android:orientation="horizontal"
-                android:padding="@dimen/dimen_default_padding_min">
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp">
 
                 <ImageView
                     android:id="@+id/imageViewIcEn"
@@ -93,6 +67,96 @@
                     android:text="English"
                     android:textColor="#5D5F61"
                     android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewEnSelected"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_selected" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_default_margin_min"
+                android:background="@drawable/button_item_question"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewIcRu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_ru" />
+
+                <TextView
+                    android:id="@+id/textViewRu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_default_margin_max"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:text="Русский"
+                    android:textColor="#5D5F61"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewRuSelected"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_selected" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutEs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_default_margin_min"
+                android:background="@drawable/button_item_question"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewIcEs"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/ic_es" />
+
+                <TextView
+                    android:id="@+id/textViewEs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_default_margin_max"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:text="Española"
+                    android:textColor="#5D5F61"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewEsSelected"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_selected" />
             </LinearLayout>
         </LinearLayout>
 
@@ -111,7 +175,7 @@
                 android:padding="16dp"
                 android:text="@string/string_cancel"
                 android:textAlignment="textEnd"
-                android:textColor="@color/color_black"
+                android:textColor="@color/color_button"
                 android:textSize="18sp" />
 
             <TextView
@@ -123,7 +187,7 @@
                 android:padding="16dp"
                 android:text="@string/string_dialog_apply"
                 android:textAlignment="textEnd"
-                android:textColor="@color/color_black"
+                android:textColor="@color/color_button"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>

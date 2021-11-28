@@ -15,11 +15,20 @@ import java.util.Locale;
 
 public class SplashActivity extends AppCompatActivity {
 
+    PreferenceManager preferenceManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PreferenceManager preferenceManager = new PreferenceManager(this);
+        preferenceManager = new PreferenceManager(this);
+        setAppLanguage();
         Intent intent = new Intent(this, MainActivity.class);
+
+
+        if(isFreePeriodHasEnded()){
+            intent = new Intent(this, AdsActivity.class);
+            this.startActivity(intent);
+        }
 
         if (preferenceManager.hasQrCode()) {
             intent = new Intent(this, StartActivity.class);
@@ -29,10 +38,15 @@ public class SplashActivity extends AppCompatActivity {
             intent = new Intent(this, SliderActivity.class);
             preferenceManager.setFirstTimeLaunch(false);
         }
-        setAppLanguage();
-        intent = new Intent(this, SliderActivity.class);
-        startActivity(intent);
-        finish();
+
+
+        this.startActivity(intent);
+    }
+
+    private boolean isFreePeriodHasEnded(){
+        int numberOfLaunches = preferenceManager.getNumberOfLaunches();
+        preferenceManager.setNumberOfLaunches();
+        return numberOfLaunches > 2;
     }
 
     public void setAppLanguage() {

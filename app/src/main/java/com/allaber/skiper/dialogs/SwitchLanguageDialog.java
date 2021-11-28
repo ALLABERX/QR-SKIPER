@@ -1,6 +1,7 @@
 package com.allaber.skiper.dialogs;
 
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_EN;
+import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_ES;
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_RU;
 import static com.allaber.skiper.utils.Thesaurus.APP_PREFERENCES;
 
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,8 +26,12 @@ public class SwitchLanguageDialog extends DialogFragment implements View.OnClick
 
     LinearLayout linearLayoutRu;
     LinearLayout linearLayoutEn;
+    LinearLayout linearLayoutEs;
     TextView textViewApply;
     String language = "en";
+    ImageView imageViewRuSelected;
+    ImageView imageViewEnSelected;
+    ImageView imageViewEsSelected;
 
     @Override
     public void onStart() {
@@ -52,12 +58,17 @@ public class SwitchLanguageDialog extends DialogFragment implements View.OnClick
         view.findViewById(R.id.textViewCancel).setOnClickListener(this);
         linearLayoutRu = view.findViewById(R.id.linearLayoutRu);
         linearLayoutEn = view.findViewById(R.id.linearLayoutEn);
+        linearLayoutEs = view.findViewById(R.id.linearLayoutEs);
         textViewApply = view.findViewById(R.id.textViewApply);
+        imageViewRuSelected = view.findViewById(R.id.imageViewRuSelected);
+        imageViewEnSelected = view.findViewById(R.id.imageViewEnSelected);
+        imageViewEsSelected = view.findViewById(R.id.imageViewEsSelected);
     }
 
     private void setOnClickListener() {
         linearLayoutRu.setOnClickListener(this);
         linearLayoutEn.setOnClickListener(this);
+        linearLayoutEs.setOnClickListener(this);
         textViewApply.setOnClickListener(this);
     }
 
@@ -76,6 +87,9 @@ public class SwitchLanguageDialog extends DialogFragment implements View.OnClick
             case R.id.linearLayoutEn:
                 setLinearLayoutState("en");
                 break;
+            case R.id.linearLayoutEs:
+                setLinearLayoutState("es");
+                break;
         }
     }
 
@@ -84,9 +98,21 @@ public class SwitchLanguageDialog extends DialogFragment implements View.OnClick
         switch (languageSuffix) {
             case APP_LANGUAGE_SUFFIX_EN:
                 linearLayoutEn.setEnabled(false);
+                imageViewEnSelected.setVisibility(View.VISIBLE);
+                imageViewRuSelected.setVisibility(View.INVISIBLE);
+                imageViewEsSelected.setVisibility(View.INVISIBLE);
                 break;
             case APP_LANGUAGE_SUFFIX_RU:
                 linearLayoutRu.setEnabled(false);
+                imageViewRuSelected.setVisibility(View.VISIBLE);
+                imageViewEnSelected.setVisibility(View.INVISIBLE);
+                imageViewEsSelected.setVisibility(View.INVISIBLE);
+                break;
+            case APP_LANGUAGE_SUFFIX_ES:
+                linearLayoutEs.setEnabled(false);
+                imageViewEsSelected.setVisibility(View.VISIBLE);
+                imageViewEnSelected.setVisibility(View.INVISIBLE);
+                imageViewRuSelected.setVisibility(View.INVISIBLE);
                 break;
         }
     }
@@ -97,10 +123,26 @@ public class SwitchLanguageDialog extends DialogFragment implements View.OnClick
             case APP_LANGUAGE_SUFFIX_EN:
                 linearLayoutEn.setEnabled(false);
                 linearLayoutRu.setEnabled(true);
+                linearLayoutEs.setEnabled(true);
+                imageViewEnSelected.setVisibility(View.VISIBLE);
+                imageViewEsSelected.setVisibility(View.INVISIBLE);
+                imageViewRuSelected.setVisibility(View.INVISIBLE);
                 break;
             case APP_LANGUAGE_SUFFIX_RU:
-                linearLayoutEn.setEnabled(true);
                 linearLayoutRu.setEnabled(false);
+                linearLayoutEn.setEnabled(true);
+                linearLayoutEs.setEnabled(true);
+                imageViewRuSelected.setVisibility(View.VISIBLE);
+                imageViewEnSelected.setVisibility(View.INVISIBLE);
+                imageViewEsSelected.setVisibility(View.INVISIBLE);
+                break;
+            case APP_LANGUAGE_SUFFIX_ES:
+                linearLayoutEs.setEnabled(false);
+                linearLayoutEn.setEnabled(true);
+                linearLayoutRu.setEnabled(true);
+                imageViewEsSelected.setVisibility(View.VISIBLE);
+                imageViewEnSelected.setVisibility(View.INVISIBLE);
+                imageViewRuSelected.setVisibility(View.INVISIBLE);
                 break;
         }
     }

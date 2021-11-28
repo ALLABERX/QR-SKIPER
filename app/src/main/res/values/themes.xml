@@ -21,10 +21,18 @@
     </style>
 
 
+    <style name="AdsScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/color_splash_screen</item>
+        <item name="android:colorBackground">@color/color_splash_screen</item>
+        <item name="android:navigationBarColor">@color/color_splash_screen</item>
+    </style>
+
     <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/color_splash_screen</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:colorBackground">@color/color_splash_screen</item>
         <item name="android:navigationBarColor">@color/color_splash_screen</item>
     </style>
 </resources>

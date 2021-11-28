@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -31,7 +32,7 @@ public class SliderActivity extends AppCompatActivity implements BaseActivityAct
 
     int[] screens = new int[]{R.layout.intro_screen1, R.layout.intro_screen2, R.layout.intro_screen3};
     ImageButton imageButtonLanguage;
-    Button buttonSkip;
+    TextView textViewSkip;
     Button buttonNext;
     ViewPager viewPagerStart;
     MyViewPagerAdapter viewPagerAdapter;
@@ -62,7 +63,7 @@ public class SliderActivity extends AppCompatActivity implements BaseActivityAct
         setContentView(R.layout.activity_slider);
         viewPagerStart = findViewById(R.id.viewPagerStart);
         imageButtonLanguage = findViewById(R.id.imageButtonLanguage);
-        buttonSkip = findViewById(R.id.buttonSkip);
+        textViewSkip = findViewById(R.id.textViewSkip);
         buttonNext = findViewById(R.id.buttonNext);
 
         imageViewPoint1 = findViewById(R.id.imageViewPoint1);
@@ -77,7 +78,7 @@ public class SliderActivity extends AppCompatActivity implements BaseActivityAct
     @Override
     public void setOnClickListener() {
         imageButtonLanguage.setOnClickListener(this);
-        buttonSkip.setOnClickListener(this);
+        textViewSkip.setOnClickListener(this);
         buttonNext.setOnClickListener(this);
     }
 
@@ -87,7 +88,7 @@ public class SliderActivity extends AppCompatActivity implements BaseActivityAct
             case R.id.imageButtonLanguage:
                 showLanguageChangeDialog();
                 break;
-            case R.id.buttonSkip:
+            case R.id.textViewSkip:
                 setActivity();
                 break;
             case R.id.buttonNext:
@@ -165,10 +166,10 @@ public class SliderActivity extends AppCompatActivity implements BaseActivityAct
         setIndicatorsAlpha(position);
         if (position == screens.length - 1) {
             buttonNext.setText(getResources().getString(R.string.string_ok));
-            buttonSkip.setVisibility(View.GONE);
+            textViewSkip.setVisibility(View.GONE);
         } else {
             buttonNext.setText(getResources().getString(R.string.string_next));
-            buttonSkip.setVisibility(View.VISIBLE);
+            textViewSkip.setVisibility(View.VISIBLE);
         }
     }
 

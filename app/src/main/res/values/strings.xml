@@ -23,6 +23,10 @@
     <string name="string_delete_qr_code">Вы действительно хотите удалить Ваш QR-код</string>
     <string name="string_delete">Удалить</string>
 
+    <!--    ManuallyDialogFragment-->
+    <string name="string_enter_manually">Ввести вручную</string>
+
+
     <!-- HomeFragment -->
     <string name="string_remove_qr_code">Удалить QR-код</string>
     <string name="string_share">Поделиться</string>
