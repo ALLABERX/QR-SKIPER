@@ -24,12 +24,6 @@ public class SplashActivity extends AppCompatActivity {
         setAppLanguage();
         Intent intent = new Intent(this, MainActivity.class);
 
-
-        if(isFreePeriodHasEnded()){
-            intent = new Intent(this, AdsActivity.class);
-            this.startActivity(intent);
-        }
-
         if (preferenceManager.hasQrCode()) {
             intent = new Intent(this, StartActivity.class);
         }
@@ -39,8 +33,12 @@ public class SplashActivity extends AppCompatActivity {
             preferenceManager.setFirstTimeLaunch(false);
         }
 
+        if(isFreePeriodHasEnded()){
+            intent = new Intent(this, AdsActivity.class);
+        }
 
         this.startActivity(intent);
+        overridePendingTransition(R.anim.fadeout, R.anim.fadein);
     }
 
     private boolean isFreePeriodHasEnded(){

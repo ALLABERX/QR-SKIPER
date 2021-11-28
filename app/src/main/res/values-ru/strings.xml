@@ -64,5 +64,11 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
+    <!--    AdsActivity-->
+    <string name="string_app_loading">Приложение загрузиться через:</string>
+    <string name="string_done">Готово</string>
 
+    <!--    SettingsActivity-->
+    <string name="string_selected_language">Русский</string>
+    <string name="string_language">Язык</string>
 </resources>

@@ -44,13 +44,13 @@ public class AdsActivity extends AppCompatActivity {
                     @Override
                     public void onTick(long millisUntilFinished) {
                         secondsRemaining = ((millisUntilFinished / 1000) + 1);
-                        counterTextView.setText("App is done loading in: " + secondsRemaining);
+                        counterTextView.setText(getResources().getString(R.string.string_app_loading) + " " + secondsRemaining);
                     }
 
                     @Override
                     public void onFinish() {
                         secondsRemaining = 0;
-                        counterTextView.setText("Done.");
+                        counterTextView.setText(getResources().getString(R.string.string_done));
 
                         Application application = getApplication();
 
@@ -81,7 +81,6 @@ public class AdsActivity extends AppCompatActivity {
             preferenceManager.setFirstTimeLaunch(false);
         }
         this.startActivity(intent);
-        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
     public void setAppLanguage() {

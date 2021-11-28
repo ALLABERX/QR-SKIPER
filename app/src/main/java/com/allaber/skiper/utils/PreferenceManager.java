@@ -50,7 +50,7 @@ public class PreferenceManager {
     }
 
     public String getAppLanguage(){
-        return sharedPreferences.getString(APP_LANGUAGE, "");
+        return sharedPreferences.getString(APP_LANGUAGE, "en");
     }
 
     public int getNumberOfLaunches() {

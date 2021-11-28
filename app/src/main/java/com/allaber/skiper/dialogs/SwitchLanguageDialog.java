@@ -21,9 +21,11 @@ import androidx.fragment.app.DialogFragment;
 
 import com.allaber.skiper.R;
 import com.allaber.skiper.utils.PreferenceManager;
+import com.allaber.skiper.utils.Test;
 
 public class SwitchLanguageDialog extends DialogFragment implements View.OnClickListener {
 
+    Test test;
     LinearLayout linearLayoutRu;
     LinearLayout linearLayoutEn;
     LinearLayout linearLayoutEs;

@@ -41,6 +41,7 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.25" />
         <entry key="app/src/main/res/layout/button_item_question.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/dialog_delete.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/dialog_manually.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/dialog_switch_language.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_browser.xml" value="0.20729166666666668" />

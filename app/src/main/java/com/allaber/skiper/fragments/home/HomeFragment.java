@@ -22,7 +22,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.allaber.skiper.R;
-import com.allaber.skiper.dialogs.OldDeleteDialogFragment;
+import com.allaber.skiper.dialogs.DeleteDialogFragment;
 import com.allaber.skiper.utils.PreferenceManager;
 import com.allaber.skiper.utils.common.BaseFragmentActions;
 
@@ -42,6 +42,7 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setAppLanguage();
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         initiationViewElements(view);
         setImageViewQR();
@@ -80,14 +81,13 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
                 copyQrCode();
                 break;
         }
-
     }
 
     private void removeQrCode() {
-        OldDeleteDialogFragment oldDeleteDialogFragment = new OldDeleteDialogFragment();
+        DeleteDialogFragment oldDeleteDialogFragment = new DeleteDialogFragment();
         FragmentManager manager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        oldDeleteDialogFragment.show(transaction, "dialog");
+        oldDeleteDialogFragment.show(transaction, "DeleteDialogFragment");
     }
 
     private void shareQrCode() {
@@ -128,5 +128,11 @@ public class HomeFragment extends Fragment implements BaseFragmentActions {
         Configuration configuration = getResources().getConfiguration();
         configuration.locale = locale;
         getResources().updateConfiguration(configuration, null);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setAppLanguage();
     }
 }

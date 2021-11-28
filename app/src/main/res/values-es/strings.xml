@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">QR - Saltar</string>
+    <string name="string_tab_text_1">Código QR</string>
+    <string name="string_tab_text_2">Datos</string>
+
+    <!-- Common-->
+    <string name="string_cancel">Cancelación</string>
+
+    <!-- SliderActivity -->
+    <string name="string_next">Más lejos</string>
+    <string name="string_skip">Saltar</string>
+    <string name="string_ok">OK</string>
+    <string name="string_fast_access">Acceso rápido a su código QR</string>
+    <string name="string_scan_qr_code">Escanee su código QR y utilícelo en cualquier momento</string>
+    <string name="string_confidentiality">Sus datos no se comparten con nadie. Todo está almacenado en tu dispositivo</string>
+
+    <!-- SwitchLanguageDialog -->
+    <string name="string_dialog_choose_language">Elige lengua</string>
+    <string name="string_dialog_apply">Solicitar</string>
+
+    <!--    DeleteDialogFragment-->
+    <string name="string_confirmation">Confirmación</string>
+    <string name="string_delete_qr_code">¿Estás seguro de que deseas eliminar tu código QR?</string>
+    <string name="string_delete">Borrar</string>
+
+    <!--    ManuallyDialogFragment-->
+    <string name="string_enter_manually">Ingresar manualmente</string>
+
+    <!-- HomeFragment -->
+    <string name="string_remove_qr_code">Eliminar código QR</string>
+    <string name="string_share">Compartir este</string>
+    <string name="string_share_qr_code">Compartir código QR</string>
+    <string name="string_copy">Dupdo</string>
+    <string name="string_copied">Copiado</string>
+    <string name="string_qr_code">Código QR</string>
+
+    <!--    StartActivity-->
+    <string name="string_scan_your_qr_code">Escanee su código QR para agregarlo a la aplicación</string>
+    <string name="string_scan">Escanear código QR</string>
+    <string name="string_enter_data_manually">Ingrese los datos manualmente</string>
+
+    <!--    ScannerActivity-->
+    <string name="string_qr_code_scanner">Escáner de código QR</string>
+
+    <!--    ManuallyActivity-->
+    <string name="string_manual_input">Entrada manual</string>
+    <string name="string_enter_qr_code">Ingrese el código QR</string>
+
+    <!--    SettingsActivity-->
+    <string name="string_settings">Ajustes</string>
+
+    <!--    AdsActivity-->
+    <string name="string_app_loading">Descarga de la aplicación a través de:</string>
+    <string name="string_done">Listo</string>
+
+    <!--    SettingsActivity-->
+    <string name="string_selected_language">Español</string>
+    <string name="string_language">Idioma</string>
+</resources>
