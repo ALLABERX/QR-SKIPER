@@ -2,7 +2,6 @@ package com.allaber.skiper.activities.settings;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -11,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.allaber.skiper.R;
 import com.allaber.skiper.dialogs.SwitchLanguageDialog;
 import com.allaber.skiper.utils.PreferenceManager;
-import com.allaber.skiper.utils.Test;
 
 import java.util.Locale;
 

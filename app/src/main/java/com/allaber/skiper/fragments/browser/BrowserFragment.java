@@ -1,6 +1,5 @@
 package com.allaber.skiper.fragments.browser;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +54,7 @@ public class BrowserFragment extends Fragment {
         new Thread(() -> {
             try {
                 String content = getContent(qrCode);
+                if (content == null) loadTextQrCode();
                 webView.post(() -> {
                     webView.loadDataWithBaseURL(qrCode, content, "text/html", "UTF-8", "https://stackoverflow.com/");
                     progressBar.setVisibility(View.INVISIBLE);
@@ -92,6 +92,8 @@ public class BrowserFragment extends Fragment {
                 buf.append(line).append("\n");
             }
             return (buf.toString());
+        } catch (Exception exception) {
+            return null;
         } finally {
             if (reader != null) {
                 reader.close();

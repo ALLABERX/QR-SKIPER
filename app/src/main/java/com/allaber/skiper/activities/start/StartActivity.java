@@ -18,11 +18,10 @@ import com.allaber.skiper.activities.scanner.ScannerActivity;
 import com.allaber.skiper.activities.settings.SettingsActivity;
 import com.allaber.skiper.dialogs.ManuallyDialogFragment;
 import com.allaber.skiper.utils.PreferenceManager;
-import com.allaber.skiper.utils.Test;
 
 import java.util.Locale;
 
-public class StartActivity extends AppCompatActivity implements Test {
+public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class StartActivity extends AppCompatActivity implements Test {
 
     }
 
-    private void showManuallyDialog(){
+    private void showManuallyDialog() {
         ManuallyDialogFragment manuallyDialogFragment = new ManuallyDialogFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -70,10 +69,5 @@ public class StartActivity extends AppCompatActivity implements Test {
         configuration.locale = locale;
         getResources().updateConfiguration(configuration, null);
     }
-
-    @Override
-    public void setLanguage() {
-        setAppLanguage();
-        recreate();
-    }
 }
+

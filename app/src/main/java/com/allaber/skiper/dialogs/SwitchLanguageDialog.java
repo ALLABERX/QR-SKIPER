@@ -3,12 +3,9 @@ package com.allaber.skiper.dialogs;
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_EN;
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_ES;
 import static com.allaber.skiper.utils.Thesaurus.APP_LANGUAGE_SUFFIX_RU;
-import static com.allaber.skiper.utils.Thesaurus.APP_PREFERENCES;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,11 +18,9 @@ import androidx.fragment.app.DialogFragment;
 
 import com.allaber.skiper.R;
 import com.allaber.skiper.utils.PreferenceManager;
-import com.allaber.skiper.utils.Test;
 
 public class SwitchLanguageDialog extends DialogFragment implements View.OnClickListener {
 
-    Test test;
     LinearLayout linearLayoutRu;
     LinearLayout linearLayoutEn;
     LinearLayout linearLayoutEs;
