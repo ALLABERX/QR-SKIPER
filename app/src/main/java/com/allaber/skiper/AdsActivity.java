@@ -81,6 +81,7 @@ public class AdsActivity extends AppCompatActivity {
             preferenceManager.setFirstTimeLaunch(false);
         }
         this.startActivity(intent);
+        this.finishAffinity();
     }
 
     public void setAppLanguage() {

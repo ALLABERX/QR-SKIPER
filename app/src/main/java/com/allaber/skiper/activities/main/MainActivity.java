@@ -43,4 +43,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PreferenceManager preferenceManager = new PreferenceManager(this);
+        if(preferenceManager.hasLanguageBeenChanged())
+            recreate();
+    }
 }

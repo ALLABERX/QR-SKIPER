@@ -38,6 +38,7 @@
     <string name="string_scan_your_qr_code">Scan your QR code to add it to the app</string>
     <string name="string_scan">Scan QR-Code</string>
     <string name="string_enter_data_manually">Enter data manually</string>
+    <string name="string_camera_permission">Error: Camera permission not received</string>
 
     <!--    ScannerActivity-->
     <string name="string_qr_code_scanner">QR-code scanner</string>

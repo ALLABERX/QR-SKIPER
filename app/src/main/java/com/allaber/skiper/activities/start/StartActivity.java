@@ -48,7 +48,7 @@ public class StartActivity extends AppCompatActivity {
         if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
             setActivity(ScannerActivity.class);
         } else {
-            Toast.makeText(this, "Ошибка: разрешения на камеру не получено", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.string_camera_permission), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -68,6 +68,15 @@ public class StartActivity extends AppCompatActivity {
         Configuration configuration = getResources().getConfiguration();
         configuration.locale = locale;
         getResources().updateConfiguration(configuration, null);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PreferenceManager preferenceManager = new PreferenceManager(this);
+        if(preferenceManager.hasLanguageBeenChanged())
+            recreate();
     }
 }
 

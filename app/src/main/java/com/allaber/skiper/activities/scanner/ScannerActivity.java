@@ -74,9 +74,12 @@ public class ScannerActivity extends AppCompatActivity implements BaseActivityAc
     }
 
     @Override
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         mCodeScanner.startPreview();
+        PreferenceManager preferenceManager = new PreferenceManager(this);
+        if(preferenceManager.hasLanguageBeenChanged())
+            recreate();
     }
 
     @Override

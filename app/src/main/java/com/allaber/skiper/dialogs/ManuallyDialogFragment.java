@@ -32,7 +32,7 @@ public class ManuallyDialogFragment extends DialogFragment implements View.OnCli
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.dialog_manually, null);
+                     View view = inflater.inflate(R.layout.dialog_manually, null);
         initiationViewElements(view);
         builder.setView(view);
         return builder.create();

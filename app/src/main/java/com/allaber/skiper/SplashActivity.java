@@ -38,13 +38,14 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         this.startActivity(intent);
+        this.finishAffinity();
         overridePendingTransition(R.anim.fadeout, R.anim.fadein);
     }
 
     private boolean isFreePeriodHasEnded(){
         int numberOfLaunches = preferenceManager.getNumberOfLaunches();
         preferenceManager.setNumberOfLaunches();
-        return numberOfLaunches > 2;
+        return numberOfLaunches > 20;
     }
 
     public void setAppLanguage() {

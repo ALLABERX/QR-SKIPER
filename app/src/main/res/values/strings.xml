@@ -39,6 +39,7 @@
     <string name="string_scan_your_qr_code">Отсканируйте Ваш QR-код чтобы добавить его в приложение</string>
     <string name="string_scan">Сканировать QR-Код</string>
     <string name="string_enter_data_manually">Ввести данные вручную</string>
+    <string name="string_camera_permission">Ошибка: разрешения на камеру не получено</string>
 
     <!--    ScannerActivity-->
     <string name="string_qr_code_scanner">Сканер QR-кода</string>
